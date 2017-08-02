@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+function PokerChipStack(){
+
+	this.chipCount = 100;
+	this.addChips = function(value){
+		this.chipCount+=value;
+		return this.chipCount;
+	}
+	this.removeChips = function (value){
+		if(value > this.chipCount){
+			var tempValue = this.chipCount;
+		} else {
+			tempValue = value;
+		}
+		this.chipCount-=tempValue;
+		return tempValue;
+	}
+	this.betAllChips = function(){
+		removeChips(this.chipCount);
+	},
+	this.getChipCount = function(){
+		return this.chipCount;
+	}
+
+}
+	
+var dansStack = new PokerChipStack();
+var sorensStack = new PokerChipStack();
+
+dansStack.addChips(20);
+sorensStack.addChips(40);
+
+console.log(dansStack.getChipCount());
+
+console.log(sorensStack.getChipCount());
+
+console.log(sorensStack);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
