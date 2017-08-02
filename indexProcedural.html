@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+var chips1 = {
+	count: 100
+}
+var chips2 = {
+	count: 20
+}
+
+function addChips(value, stack){
+	stack.count+=value;
+	return stack.count;
+}
+
+function removeChips(value, stack){
+	if(value > chipCount){
+		var tempValue = stack.count;
+	} else {
+		tempValue = value;
+	}
+	stack.count-=tempValue;
+	return tempValue;
+}
+
+function betAllChips(stack){
+	removeChips(stack.count);
+}
+
+function getChipCount(stack){
+	return stack.count;
+}
+
+
+addChips(20, chips1);
+addChips(50, chips2);
+
+console.log("chips1: "+getChipCount(chips1));
+
+console.log("chips2: "+getChipCount(chips2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

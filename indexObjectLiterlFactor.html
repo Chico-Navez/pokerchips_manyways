@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+function makeChips(){
+	var chipStack = 
+	{
+		chipCount : 100,
+		addChips : function(value){
+			this.chipCount+=value;
+			return this.chipCount;
+		},
+		removeChips : function (value){
+			if(value > this.chipCount){
+				var tempValue = this.chipCount;
+			} else {
+				tempValue = value;
+			}
+			this.chipCount-=tempValue;
+			return tempValue;
+		},
+		betAllChips : function(){
+			removeChips(this.chipCount);
+		},
+		getChipCount : function(){
+			return this.chipCount;
+		}
+	}
+	return chipStack;
+}
+	
+var dansStack = makeChips();
+var sorensStack = makeChips();
+
+dansStack.addChips(20);
+sorensStack.addChips(40);
+
+console.log(dansStack.getChipCount());
+
+console.log(sorensStack.getChipCount());
+
+console.log(sorensStack);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
